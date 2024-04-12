@@ -46,20 +46,22 @@ export default {
 </script> -->
 
 <script lang="ts" setup name="Person">
+import { ref } from "vue";
+
 // 数据，原本写在 data() 中，此时的 name、age、tel 都非响应式数据。
-let name = "张三";
-let age = 18;
+let name = ref("张三");
+let age = ref(18);
 let tel = "12345678901";
 let address = "北京市朝阳社区";
 
 // 方法
 function changeName() {
-  name = "张三"; // 注意：这样修改 name 页面不会发生变化。
+  name.value = "Zhang San"; // 注意：这样修改 name 页面不会发生变化。
   console.log(name); // name 确实已更改，但却并非响应式。
 }
 
 function changeAge() {
-  age += 1; // 注意：这样修改 age 页面不会发生变化。
+  age.value += 1; // 注意：这样修改 age 页面不会发生变化。
   console.log(age); // age 确实已更改，但却并非响应式。
 }
 function showTel() {
