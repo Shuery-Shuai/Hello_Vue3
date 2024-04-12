@@ -1,9 +1,6 @@
 <template>
   <!-- HTML -->
-  <div class="app">
-    <h1>你好！Vue 3！</h1>
-    <Person />
-  </div>
+  <Person />
 </template>
 
 <script lang="ts">
@@ -18,10 +15,4 @@ export default {
 
 <style>
 /* 样式 */
-.app {
-  background-color: aliceblue;
-  box-shadow: 0 0 10px;
-  border-radius: 10px;
-  padding: 20px;
-}
 </style>
