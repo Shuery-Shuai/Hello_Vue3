@@ -5,6 +5,11 @@
     <button @click="changeName">修改名字</button>
     <button @click="changeAge">修改年龄</button>
     <button @click="showTel">查看联系方式</button>
+    <!-- <hr /> -->
+    <!-- <h2>测试 1：{{ a }}</h2> -->
+    <!-- <h2>测试 2：{{ c }}</h2> -->
+    <!-- <h2>测试 3：{{ d }}</h2> -->
+    <!-- <button @click="b">测试</button> -->
   </div>
 </template>
 
@@ -14,6 +19,19 @@ export default {
   beforeCreate() {
     console.log("beforeCreate");
   },
+  // Vue2 中的语法依然能够在 Vue3 中使用，但是 setup() 中的数据无法在 data() 及 methods 中使用，而反过来却可以。原因为 setup() 加载在 data() 与 methods 之前。
+  // data() {
+  //   return {
+  //     a: 100,
+  //     c: this.name,
+  //     d: 900,
+  //   };
+  // },
+  // methods: {
+  //   b() {
+  //     console.log("b");
+  //   },
+  // },
   setup() {
     // setup() 中的 this 是 undefined，Vue3 中已经弱化了 this。
     // 数据，原本写在 data() 中，此时的 name、age、tel 都非响应式数据。
