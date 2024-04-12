@@ -37,6 +37,9 @@ export default {
 
     // 将数据、方法返回，模板中才可以使用。
     return { name, age, changeName, changeAge, showTel };
+
+    // setup() 的返回值也可以是一个渲染函数。
+    // return () => "23333333!!!";
   },
 };
 </script>
