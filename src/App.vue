@@ -7,8 +7,8 @@
 </template>
 
 <script lang="ts">
-// TS
-import { Person } from "./components/Person.vue";
+// JS 或 TS
+import Person from "./components/Person.vue";
 
 export default {
   name: "App", // 组件名
