@@ -1,17 +1,23 @@
 <template>
   <div class="person">
     <!-- 使用 ref 中的 {{ thing }} 时无需加 value 如 {{ thing.value }}，Vue 会自动处理。 -->
-    <h2>姓名：{{ name }}</h2>
+    <!-- <h2>姓名：{{ name }}</h2>
     <h2>年龄：{{ age }}</h2>
     <h2>地址：{{ address }}</h2>
     <button @click="changeName">修改名字</button>
     <button @click="changeAge">修改年龄</button>
-    <button @click="showTel">查看联系方式</button>
+    <button @click="showTel">查看联系方式</button> -->
     <!-- <hr />
     <h2>测试 1：{{ a }}</h2>
     <h2>测试 2：{{ c }}</h2>
     <h2>测试 3：{{ d }}</h2>
     <button @click="b">测试</button> -->
+    <h2>姓名：{{ person.name }}</h2>
+    <h2>年龄：{{ person.age }}</h2>
+    <h2>电话：{{ person.tel }}</h2>
+    <button @click="changeName">修改名字</button>
+    <button @click="changeAge">修改年龄</button>
+    <button @click="changeTel">修改电话</button>
   </div>
 </template>
 
@@ -47,26 +53,46 @@ export default {
 </script> -->
 
 <script lang="ts" setup name="Person">
-import { ref } from "vue";
+// import { ref } from "vue";
 
-// 数据，原本写在 data() 中，此时的 name、age、tel 都非响应式数据。
-let name = ref("张三");
-let age = ref(18);
-let tel = "12345678901";
-let address = "北京市朝阳社区";
+// // 数据，原本写在 data() 中，此时的 name、age、tel 都非响应式数据。
+// let name = ref("张三");
+// let age = ref(18);
+// let tel = "12345678901";
+// let address = "北京市朝阳社区";
 
-// 方法
+// // 方法
+// function changeName() {
+//   name.value = "Zhang San"; // 注意：这样修改 name 页面不会发生变化。
+//   console.log(name); // name 确实已更改，但却并非响应式。
+// }
+
+// function changeAge() {
+//   age.value += 1; // 注意：这样修改 age 页面不会发生变化。
+//   console.log(age); // age 确实已更改，但却并非响应式。
+// }
+// function showTel() {
+//   alert(tel);
+// }
+import { reactive, toRefs, toRef } from "vue";
+
+let person = reactive({ name: "张三", age: 18, tel: "12345678901" });
+
+// 利用 toRefs() 解构响应式数据，即将 reactive() 对象数据中的每一键值赋予另一新定义 ref() 变量并将其与原本数据中的键值绑定，类似于指针。
+let { name, age } = toRefs(person);
+// toRef() 则单独处理某一键值。
+let tel = toRef(person, "tel");
+
 function changeName() {
-  name.value = "Zhang San"; // 注意：这样修改 name 页面不会发生变化。
-  console.log(name); // name 确实已更改，但却并非响应式。
+  name.value += ".";
+  console.log(name.value, person.name);
 }
-
 function changeAge() {
-  age.value += 1; // 注意：这样修改 age 页面不会发生变化。
-  console.log(age); // age 确实已更改，但却并非响应式。
+  age.value += 1;
 }
-function showTel() {
-  alert(tel);
+function changeTel() {
+  tel.value = "14785236903";
+  console.log(tel.value, person.tel);
 }
 </script>
 <style scoped>
