@@ -70,7 +70,7 @@ function showTel() {
 </script>
 <style scoped>
 .person {
-  background-color: beige;
+  background-color: aliceblue;
   box-shadow: 0 0 10px;
   border-radius: 10px;
   padding: 20px;
