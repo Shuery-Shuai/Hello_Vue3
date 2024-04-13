@@ -1,5 +1,6 @@
 <template>
   <div class="person">
+    <!-- 使用 ref 中的 {{ thing }} 时无需加 value 如 {{ thing.value }}，Vue 会自动处理。 -->
     <h2>姓名：{{ name }}</h2>
     <h2>年龄：{{ age }}</h2>
     <h2>地址：{{ address }}</h2>
