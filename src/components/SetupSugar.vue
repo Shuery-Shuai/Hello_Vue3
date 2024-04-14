@@ -10,6 +10,7 @@
   </div>
 </template>
 
+<!-- 使用 name="SetupSugar" 需要安装插件 vite-plugin-vue-setup-extend。 -->
 <script lang="ts" setup name="SetupSugar">
 // 数据，原本写在 data() 中，此时的 name、age、tel 都非响应式数据。
 let name = "张三";

@@ -2,7 +2,7 @@
   <!-- HTML -->
   <div class="app">
     <h1>你好！Vue 3！</h1>
-    <SimpleProject />
+    <!-- <SimpleProject />
     <OptionsAPI />
     <SetupOverview />
     <SetupVsOptionsAPI />
@@ -12,10 +12,12 @@
     <RefObject />
     <RefVsReactive />
     <ToRefAndToRefs />
-    <Computed />
-    <Person />
+    <Computed /> -->
+    <!-- <WatchRefBasic /> -->
+    <WatchRefObject />
+    <!-- <Person />
     <Car />
-    <Game />
+    <Game /> -->
   </div>
 </template>
 
@@ -32,6 +34,8 @@ import RefObject from "./components/RefObject.vue";
 import RefVsReactive from "./components/RefVsReactive.vue";
 import ToRefAndToRefs from "./components/ToRefAndToRefs.vue";
 import Computed from "./components/Computed.vue";
+import WatchRefBasic from "./components/WatchRefBasic.vue";
+import WatchRefObject from "./components/WatchRefObject.vue";
 import Person from "./components/Person.vue";
 import Car from "./components/Car.vue";
 import Game from "./components/Game.vue";
@@ -50,6 +54,8 @@ export default {
     RefVsReactive,
     ToRefAndToRefs,
     Computed,
+    WatchRefBasic,
+    WatchRefObject,
     Person,
     Car,
     Game,
