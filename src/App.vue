@@ -14,7 +14,8 @@
     <ToRefAndToRefs />
     <Computed /> -->
     <!-- <WatchRefBasic /> -->
-    <WatchRefObject />
+    <!-- <WatchRefObject /> -->
+    <WatchReactive />
     <!-- <Person />
     <Car />
     <Game /> -->
@@ -36,6 +37,7 @@ import ToRefAndToRefs from "./components/ToRefAndToRefs.vue";
 import Computed from "./components/Computed.vue";
 import WatchRefBasic from "./components/WatchRefBasic.vue";
 import WatchRefObject from "./components/WatchRefObject.vue";
+import WatchReactive from "./components/WatchReactive.vue";
 import Person from "./components/Person.vue";
 import Car from "./components/Car.vue";
 import Game from "./components/Game.vue";
@@ -56,6 +58,7 @@ export default {
     Computed,
     WatchRefBasic,
     WatchRefObject,
+    WatchReactive,
     Person,
     Car,
     Game,
