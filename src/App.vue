@@ -16,7 +16,8 @@
     <!-- <WatchRefBasic /> -->
     <!-- <WatchRefObject /> -->
     <!-- <WatchReactive /> -->
-    <WatchAttribute />
+    <!-- <WatchAttribute /> -->
+    <WatchMultiData />
     <!-- <Person />
     <Car />
     <Game /> -->
@@ -40,6 +41,7 @@ import WatchRefBasic from "./components/WatchRefBasic.vue";
 import WatchRefObject from "./components/WatchRefObject.vue";
 import WatchReactive from "./components/WatchReactive.vue";
 import WatchAttribute from "./components/WatchAttribute.vue";
+import WatchMultiData from "./components/WatchMultiData.vue";
 import Person from "./components/Person.vue";
 import Car from "./components/Car.vue";
 import Game from "./components/Game.vue";
@@ -62,6 +64,7 @@ export default {
     WatchRefObject,
     WatchReactive,
     WatchAttribute,
+    WatchMultiData,
     Person,
     Car,
     Game,
