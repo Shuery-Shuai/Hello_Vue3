@@ -2,6 +2,8 @@
   <!-- HTML -->
   <div class="app">
     <h1>你好！Vue 3！</h1>
+    <h3 ref="title3">Vue3 启航~~~</h3>
+    <button @click="showLog">点我输出 H3 元素</button>
     <!-- <SimpleProject />
     <OptionsAPI />
     <SetupOverview />
@@ -18,15 +20,18 @@
     <!-- <WatchReactive /> -->
     <!-- <WatchAttribute /> -->
     <!-- <WatchMultiData /> -->
-    <WatchEffect />
+    <!-- <WatchEffect /> -->
+    <TagRef ref="tagref" />
+    <button @click="test">测试</button>
     <!-- <Person />
     <Car />
     <Game /> -->
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 // JS 或 TS
+import { ref } from "vue";
 import SimpleProject from "./components/SimpleProject.vue";
 import OptionsAPI from "./components/OptionsAPI.vue";
 import SetupOverview from "./components/SetupOverview.vue";
@@ -44,35 +49,20 @@ import WatchReactive from "./components/WatchReactive.vue";
 import WatchAttribute from "./components/WatchAttribute.vue";
 import WatchMultiData from "./components/WatchMultiData.vue";
 import WatchEffect from "./components/WatchEffect.vue";
+import TagRef from "./components/TagRef.vue";
 import Person from "./components/Person.vue";
 import Car from "./components/Car.vue";
 import Game from "./components/Game.vue";
 
-export default {
-  name: "App", // 组件名
-  components: {
-    SimpleProject,
-    OptionsAPI,
-    SetupOverview,
-    SetupVsOptionsAPI,
-    SetupSugar,
-    RefBasic,
-    ReactiveObject,
-    RefObject,
-    RefVsReactive,
-    ToRefAndToRefs,
-    Computed,
-    WatchRefBasic,
-    WatchRefObject,
-    WatchReactive,
-    WatchAttribute,
-    WatchMultiData,
-    WatchEffect,
-    Person,
-    Car,
-    Game,
-  }, // 注册组件
-};
+let title3 = ref();
+let tagref = ref();
+
+function showLog() {
+  console.log(title3.value);
+}
+function test() {
+  console.log(tagref.value);
+}
 </script>
 
 <style>
