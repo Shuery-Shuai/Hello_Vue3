@@ -6,6 +6,7 @@
 
 <script setup lang="ts">
 import { type PersonInter, type Persons } from "@/types";
+import { reactive } from "vue";
 
 // let person: PersonInter = { id: 'zhangsan', name: '张三', age: 60 }
 let personList: Persons = [
@@ -13,6 +14,11 @@ let personList: Persons = [
   { id: "lisi", name: "李四", age: 50 },
   { id: "wangwu", name: "王五", age: 40 },
 ];
+let personList2 = reactive<Persons>([
+  { id: "zhangsan", name: "张三", age: 60 },
+  { id: "lisi", name: "李四", age: 50 },
+  { id: "wangwu", name: "王五", age: 40 },
+]);
 </script>
 
 <style scoped>

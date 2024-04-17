@@ -23,7 +23,8 @@
       <h3 ref="title3">Vue3 启航~~~</h3>
       <button @click="showLog">点我输出 H3 元素</button>
     <button @click="test">测试</button> -->
-    <TypeScript />
+    <!-- <TypeScript /> -->
+    <Props a="年龄" :list="personList" />
     <!-- <Person />
     <Car />
     <Game /> -->
@@ -32,7 +33,8 @@
 
 <script lang="ts" setup>
 // JS 或 TS
-import { ref } from "vue";
+import { reactive, ref } from "vue";
+import { type Persons } from "@/types";
 import SimpleProject from "./components/SimpleProject.vue";
 import OptionsAPI from "./components/OptionsAPI.vue";
 import SetupOverview from "./components/SetupOverview.vue";
@@ -52,12 +54,18 @@ import WatchMultiData from "./components/WatchMultiData.vue";
 import WatchEffect from "./components/WatchEffect.vue";
 import TagRef from "./components/TagRef.vue";
 import TypeScript from "./components/TypeScript.vue";
+import Props from "./components/Props.vue";
 import Person from "./components/Person.vue";
 import Car from "./components/Car.vue";
 import Game from "./components/Game.vue";
 
 let title3 = ref();
 let tagref = ref();
+let personList = reactive<Persons>([
+  { id: "zhangsan", name: "张三", age: 60 },
+  { id: "lisi", name: "李四", age: 50 },
+  { id: "wangwu", name: "王五", age: 40 },
+]);
 
 function showLog() {
   console.log(title3.value);
