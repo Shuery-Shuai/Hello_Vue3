@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h1>路由的基本切换效果</h1>
-    <h2 class="title">Vue 路由测试</h2>
+  <div class="router">
+    <h1>路由的基本切换效果与文件规范及路由组件的挂卸载</h1>
+    <Header />
     <!-- 导航区 -->
     <div class="navigate">
       <RouterLink to="/home" active-class="active">首页</RouterLink>
@@ -17,19 +17,15 @@
 
 <script setup lang="ts">
 import { RouterView, RouterLink } from "vue-router";
+import Header from "./RouterOverview/Header.vue";
 </script>
 
 <style scoped>
-.title {
-  text-align: center;
-  word-spacing: 5px;
-  margin: 30px;
-  height: 70px;
-  line-height: 70px;
-  background-image: linear-gradient(45deg, gray, white);
+.router {
+  background-color: antiquewhite;
+  box-shadow: 0 0 10px;
   border-radius: 10px;
-  box-shadow: 0 0 2px;
-  font-size: 30px;
+  padding: 20px;
 }
 .navigate {
   display: flex;

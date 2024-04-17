@@ -17,6 +17,7 @@
   height: 100%;
 }
 img {
-  width: 30rem;
+  max-width: 100%;
+  max-height: 100%;
 }
 </style>
