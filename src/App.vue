@@ -25,8 +25,9 @@
     <button @click="test">测试</button> -->
     <!-- <TypeScript /> -->
     <!-- <Props a="年龄" :list="personList" /> -->
-    <LifeCircle v-if="isShow" />
-    <button @click="showNot">{{ mountNot }}</button>
+    <!-- <LifeCircle v-if="isShow" />
+    <button @click="showNot">{{ mountNot }}</button> -->
+    <CustomHooks />
     <!-- <Person />
     <Car />
     <Game /> -->
@@ -58,38 +59,39 @@ import TagRef from "./components/TagRef.vue";
 import TypeScript from "./components/TypeScript.vue";
 import Props from "./components/Props.vue";
 import LifeCircle from "./components/LifeCircle.vue";
+import CustomHooks from "./components/CustomHooks.vue";
 import Person from "./components/Person.vue";
 import Car from "./components/Car.vue";
 import Game from "./components/Game.vue";
 
-let title3 = ref();
-let tagref = ref();
-let personList = reactive<Persons>([
-  { id: "zhangsan", name: "张三", age: 60 },
-  { id: "lisi", name: "李四", age: 50 },
-  { id: "wangwu", name: "王五", age: 40 },
-]);
-let isShow = ref(true);
-let mountNot = ref("卸载");
+// let title3 = ref();
+// let tagref = ref();
+// let personList = reactive<Persons>([
+//   { id: "zhangsan", name: "张三", age: 60 },
+//   { id: "lisi", name: "李四", age: 50 },
+//   { id: "wangwu", name: "王五", age: 40 },
+// ]);
+// let isShow = ref(true);
+// let mountNot = ref("卸载");
 
-function showLog() {
-  console.log(title3.value);
-}
-function test() {
-  console.log(tagref.value);
-}
-function showNot() {
-  isShow.value = !isShow.value;
-  if (mountNot.value == "卸载") {
-    mountNot.value = "挂载";
-  } else if (mountNot.value == "挂载") {
-    mountNot.value = "卸载";
-  }
-}
+// function showLog() {
+//   console.log(title3.value);
+// }
+// function test() {
+//   console.log(tagref.value);
+// }
+// function showNot() {
+//   isShow.value = !isShow.value;
+//   if (mountNot.value == "卸载") {
+//     mountNot.value = "挂载";
+//   } else if (mountNot.value == "挂载") {
+//     mountNot.value = "卸载";
+//   }
+// }
 
-onMounted(() => {
-  console.log("父——挂载完毕");
-});
+// onMounted(() => {
+//   console.log("父——挂载完毕");
+// });
 </script>
 
 <style>
