@@ -2,27 +2,28 @@
   <!-- HTML -->
   <div class="app">
     <h1>你好！Vue 3！</h1>
-    <h3 ref="title3">Vue3 启航~~~</h3>
-    <button @click="showLog">点我输出 H3 元素</button>
     <!-- <SimpleProject />
-    <OptionsAPI />
-    <SetupOverview />
-    <SetupVsOptionsAPI />
-    <SetupSugar />
-    <RefBasic />
-    <ReactiveObject />
-    <RefObject />
-    <RefVsReactive />
-    <ToRefAndToRefs />
-    <Computed /> -->
+      <OptionsAPI />
+      <SetupOverview />
+      <SetupVsOptionsAPI />
+      <SetupSugar />
+      <RefBasic />
+      <ReactiveObject />
+      <RefObject />
+      <RefVsReactive />
+      <ToRefAndToRefs />
+      <Computed /> -->
     <!-- <WatchRefBasic /> -->
     <!-- <WatchRefObject /> -->
     <!-- <WatchReactive /> -->
     <!-- <WatchAttribute /> -->
     <!-- <WatchMultiData /> -->
     <!-- <WatchEffect /> -->
-    <TagRef ref="tagref" />
-    <button @click="test">测试</button>
+    <!-- <TagRef ref="tagref" />
+      <h3 ref="title3">Vue3 启航~~~</h3>
+      <button @click="showLog">点我输出 H3 元素</button>
+    <button @click="test">测试</button> -->
+    <TypeScript />
     <!-- <Person />
     <Car />
     <Game /> -->
@@ -50,6 +51,7 @@ import WatchAttribute from "./components/WatchAttribute.vue";
 import WatchMultiData from "./components/WatchMultiData.vue";
 import WatchEffect from "./components/WatchEffect.vue";
 import TagRef from "./components/TagRef.vue";
+import TypeScript from "./components/TypeScript.vue";
 import Person from "./components/Person.vue";
 import Car from "./components/Car.vue";
 import Game from "./components/Game.vue";
