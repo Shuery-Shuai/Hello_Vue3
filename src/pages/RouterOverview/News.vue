@@ -9,7 +9,7 @@
           >{{ news.title }}</RouterLink
         > -->
         <!-- 第二种写法 -->
-        <!-- <RouterLink
+        <RouterLink
           :to="{
             name: 'detail',
             query: {
@@ -19,9 +19,9 @@
             },
           }"
           >{{ news.title }}</RouterLink
-        > -->
+        >
         <!-- 第三种写法 -->
-        <RouterLink
+        <!-- <RouterLink
           :to="{
             // 在 to 对象中使用 params 不能够使用 path
             // path: '/news/detail',
@@ -30,7 +30,7 @@
             params: { id: news.id, title: news.title, content: news.content },
           }"
           >{{ news.title }}</RouterLink
-        >
+        > -->
       </li>
     </ul>
     <!-- 展示区 -->

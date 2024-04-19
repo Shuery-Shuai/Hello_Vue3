@@ -25,9 +25,25 @@ const router = createRouter({
         {
           name: "detail",
           // path: "detail",
+          path: "detail",
           // 使用 params 时需要在 path 中占位
-          path: "detail/:id/:title/:content?",
+          // path: "detail/:id/:title/:content?",
           component: Detail,
+          // 第一种写法：将路由收到的所有 params 参数作为 props 传给路由组件。
+          // props: true,
+          // 第二种写法：函数写法，可以自己决定将什么作为 props 给路由组件。
+          props(route) {
+            // props 中传递的是路由信息。
+            // console.log(route);
+            return route.query;
+          },
+          // 第三种写法：对象写法，可以自己决定将什么作为 props 给路由组件。
+          // props: {
+          //   // 数据是写死了的。
+          //   id: "id",
+          //   title: "title",
+          //   content: "content",
+          // },
         },
       ],
     },
