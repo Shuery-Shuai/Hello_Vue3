@@ -28,7 +28,9 @@
     <!-- <LifeCircle v-if="isShow" />
     <button @click="showNot">{{ mountNot }}</button> -->
     <!-- <CustomHooks /> -->
-    <RouterOverview />
+    <!-- <RouterOverview /> -->
+    <Counter />
+    <LoveTalk />
     <!-- <Person />
     <Car />
     <Game /> -->
@@ -62,6 +64,8 @@ import Props from "./components/Props.vue";
 import LifeCircle from "./components/LifeCircle.vue";
 import CustomHooks from "./components/CustomHooks.vue";
 import RouterOverview from "./components/RouterOverview.vue";
+import Counter from "./components/Pina/Counter.vue";
+import LoveTalk from "./components/Pina/LoveTalk.vue";
 import Person from "./components/Person.vue";
 import Car from "./components/Car.vue";
 import Game from "./components/Game.vue";
