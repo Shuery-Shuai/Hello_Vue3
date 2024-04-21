@@ -1,6 +1,9 @@
 <template>
   <div class="counter">
     <h2>当前求和为：{{ counterStore.sum }}</h2>
+    <h3>
+      欢迎来到 {{ counterStore.school }}，坐落于 {{ counterStore.address }}
+    </h3>
     <select v-model.number="n">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -22,8 +25,21 @@ const counterStore = useCounterStore();
 
 let n = ref(1); // 用户选择的数字
 
-function add() {}
-function minus() {}
+function add() {
+  // // 第一种修改方式
+  // counterStore.sum += n.value;
+  // // 第二种修改方式
+  // counterStore.$patch({
+  //   sum: 666,
+  //   school: "Web",
+  //   address: "Browser",
+  // });
+  // 第三种修改方法
+  counterStore.increment(n.value);
+}
+function minus() {
+  counterStore.sum -= n.value;
+}
 </script>
 
 <style scoped>
